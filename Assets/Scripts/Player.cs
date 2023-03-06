@@ -15,7 +15,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        Jump();
+    }
+
+    void Jump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             playerRb.AddForce(new Vector2(0, 5), ForceMode2D.Impulse);
         }
