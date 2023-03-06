@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
+    public int speed = 2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +15,8 @@ public class Platform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(-1, 0, 0);
+        //Move Platform
+        //transform.Translate(-1, 0, 0);
+        transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime;
     }
 }
