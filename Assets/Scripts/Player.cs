@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerRb.AddForce(new Vector2(0, 5), ForceMode2D.Impulse);
     }
 
     // Update is called once per frame
