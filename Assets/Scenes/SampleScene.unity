@@ -365,6 +365,7 @@ MonoBehaviour:
   - {fileID: 6886873956379325490, guid: 0c1d6d3dafcac2645ac4ea86f33b0edc, type: 3}
   - {fileID: 5011930797325101711, guid: cfb3a9013d1daa940a4206a005dbb75b, type: 3}
   - {fileID: 6020315985973829955, guid: 47fc7ebe23df04447b4464178883803a, type: 3}
+  - {fileID: 2953668474444244217, guid: b2f885f710ea5de47aec436c3f94d7a0, type: 3}
   referencePoint: {fileID: 1024572933}
   lastCreatedPlatform: {fileID: 1116346788}
   spaceBetweenPlatforms: 2
