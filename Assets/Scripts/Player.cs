@@ -13,14 +13,31 @@ public class Player : MonoBehaviour
     void Update()
     {
         Jump();
+        RaycastDown();
+    }
+    
+    // Jump logic
+    void Jump()
+    {
+        if(isGrounded)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                playerRb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            }
+        }
+    }
 
+    // Casts a ray below the player to detect what is below
+    void RaycastDown()
+    {
         // Find out what is beneath the player
         RaycastHit2D hit = Physics2D.Raycast(raycastOrigin.position, Vector2.down);
 
         // hit null check
-        if(hit.collider != null)
+        if (hit.collider != null)
         {
-            if(hit.distance < 0.1f)
+            if (hit.distance < 0.1f)
             {
                 isGrounded = true;
 
@@ -35,14 +52,6 @@ public class Player : MonoBehaviour
 
             // Draw the ray under the player
             Debug.DrawRay(raycastOrigin.position, Vector2.down, Color.green);
-        }
-    }
-    
-    void Jump()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            playerRb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
     }
 }
