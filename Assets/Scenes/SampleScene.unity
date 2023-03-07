@@ -362,6 +362,7 @@ MonoBehaviour:
   platformPrefab:
   - {fileID: 4506539386896729348, guid: 4c6b93bc62348634f97d2ce2b3d6959a, type: 3}
   - {fileID: 4506539386896729348, guid: d1e9381f4eab87d4eb4afe9f0709b092, type: 3}
+  - {fileID: 6886873956379325490, guid: 0c1d6d3dafcac2645ac4ea86f33b0edc, type: 3}
   - {fileID: 6020315985973829955, guid: 47fc7ebe23df04447b4464178883803a, type: 3}
   referencePoint: {fileID: 1024572933}
   lastCreatedPlatform: {fileID: 1116346788}
@@ -591,7 +592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dba0227cbb25bbc4ba4920a6ee75f369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 0
   leftLimit: 40
 --- !u!1 &1504726033
 GameObject:
