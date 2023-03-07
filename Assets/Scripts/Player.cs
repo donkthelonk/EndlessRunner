@@ -60,17 +60,17 @@ public class Player : MonoBehaviour
                 isGrounded = true;
                 anim.SetBool("isGrounded", true);
             }
-            else
-            {
-                isGrounded = false;
-                anim.SetBool("isGrounded", false); ;
-            }
 
             // Send name of object to console
             Debug.Log(hit.transform.name);
 
             // Draw the ray under the player
             Debug.DrawRay(raycastOrigin.position, Vector2.down, Color.green);
+        }
+        else
+        {
+            isGrounded = false;
+            anim.SetBool("isGrounded", false); ;
         }
     }
 
