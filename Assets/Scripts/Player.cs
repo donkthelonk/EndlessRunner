@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     {
         Jump();
     }
-
+    
     void Jump()
     {
         if (Input.GetKeyDown(KeyCode.Space))
