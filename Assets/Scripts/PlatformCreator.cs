@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class PlatformCreator : MonoBehaviour
 {
-    public GameObject platformPrefab;
-    public Transform referencePoint;
-
-    private GameObject lastCreatedPlatform;
+    [SerializeField] GameObject platformPrefab;
+    [SerializeField] Transform referencePoint;
+    [SerializeField] GameObject lastCreatedPlatform;
 
     // Start is called before the first frame update
     void Start()
