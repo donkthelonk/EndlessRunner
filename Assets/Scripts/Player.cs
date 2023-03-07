@@ -7,8 +7,9 @@ public class Player : MonoBehaviour
     [SerializeField] Rigidbody2D playerRb;
     [SerializeField] float jumpForce = 5;
     [SerializeField] Transform raycastOrigin;
+    [SerializeField] Animator anim;
     [SerializeField] bool isGrounded;
-    bool jump;
+    [SerializeField] bool jump;
 
     // Update is called once per frame
     void Update()
@@ -30,6 +31,9 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 jump = true;
+
+                // Triggers the jump animation
+                anim.SetTrigger("Jump");
             }
         }
     }
@@ -46,11 +50,12 @@ public class Player : MonoBehaviour
             if (hit.distance < 0.1f)
             {
                 isGrounded = true;
-
+                anim.SetBool("IsGrounded", true);
             }
             else
             {
                 isGrounded = false;
+                anim.SetBool("IsGrounded", false); ;
             }
 
             // Send name of object to console
