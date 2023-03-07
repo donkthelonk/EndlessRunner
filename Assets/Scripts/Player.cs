@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public Rigidbody2D playerRb;
-    public float jumpForce = 5;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] Rigidbody2D playerRb;
+    [SerializeField] float jumpForce = 5;
 
     // Update is called once per frame
     void Update()
