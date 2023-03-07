@@ -12,12 +12,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Jump();
-        RaycastDown();
+        CheckForInput();
+        CheckForGrounded();
     }
     
-    // Jump logic
-    void Jump()
+    // Logic for user input
+    void CheckForInput()
     {
         if(isGrounded)
         {
@@ -28,8 +28,8 @@ public class Player : MonoBehaviour
         }
     }
 
-    // Casts a ray below the player to detect what is below
-    void RaycastDown()
+    // Check if the player is grounded
+    void CheckForGrounded()
     {
         // Find out what is beneath the player
         RaycastHit2D hit = Physics2D.Raycast(raycastOrigin.position, Vector2.down);
