@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        // initialize player Y position
         lastYPos = transform.position.y;
     }
 
@@ -22,18 +23,7 @@ public class Player : MonoBehaviour
     {
         CheckForInput();
 
-        // check if player is falling
-        if(transform.position.y < lastYPos)
-        {
-            anim.SetBool("Falling", true);
-        }
-        else
-        {
-            anim.SetBool("Falling", false);
-        }
-
-        // store player Y position
-        lastYPos = transform.position.y;
+        CheckForFalling();
     }
 
     void FixedUpdate()
@@ -94,5 +84,21 @@ public class Player : MonoBehaviour
             jump = false;
             playerRb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
+    }
+
+    void CheckForFalling()
+    {
+        // check if player is falling
+        if (transform.position.y < lastYPos)
+        {
+            anim.SetBool("Falling", true);
+        }
+        else
+        {
+            anim.SetBool("Falling", false);
+        }
+
+        // store player Y position
+        lastYPos = transform.position.y;
     }
 }
