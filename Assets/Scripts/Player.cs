@@ -22,14 +22,13 @@ public class Player : MonoBehaviour
     void Update()
     {
         CheckForInput();
-
         CheckForFalling();
     }
 
     void FixedUpdate()
     {
         CheckForGrounded();
-        Jump();
+        CheckForJump();
     }
 
     // Logic for user input
@@ -76,7 +75,7 @@ public class Player : MonoBehaviour
     }
 
     // Jump logic
-    void Jump()
+    void CheckForJump()
     {
         // check if user has pressed jump key; if so, reset jump bool and jump
         if (jump)
