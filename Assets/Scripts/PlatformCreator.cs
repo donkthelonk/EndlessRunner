@@ -7,6 +7,8 @@ public class PlatformCreator : MonoBehaviour
     [SerializeField] GameObject platformPrefab;
     [SerializeField] Transform referencePoint;
     [SerializeField] GameObject lastCreatedPlatform;
+    [SerializeField] float spaceBetweenPlatforms = 2;
+    private float lastPlatformWidth;
 
     // Start is called before the first frame update
     void Start()
@@ -18,9 +20,15 @@ public class PlatformCreator : MonoBehaviour
     void Update()
     {
         // when platform reaches a certain point, spawn a new platform
-        if(lastCreatedPlatform.transform.position.x < 0)
+        if(lastCreatedPlatform.transform.position.x < referencePoint.position.x)
         {
-            lastCreatedPlatform = Instantiate(platformPrefab, referencePoint.position, Quaternion.identity);
+            // New position to create platform
+            Vector3 targetCreationPoint = new Vector3(referencePoint.position.x + lastPlatformWidth + spaceBetweenPlatforms, 0, 0);
+            lastCreatedPlatform = Instantiate(platformPrefab, targetCreationPoint, Quaternion.identity);
+
+            // Get width of last platform
+            BoxCollider2D collider = lastCreatedPlatform.GetComponent<BoxCollider2D>();
+            lastPlatformWidth = collider.bounds.size.x;
         }
     }
 }
