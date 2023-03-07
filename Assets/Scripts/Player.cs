@@ -20,16 +20,21 @@ public class Player : MonoBehaviour
         // hit null check
         if(hit.collider != null)
         {
-            isGrounded = true;
+            if(hit.distance < 0.1f)
+            {
+                isGrounded = true;
+
+            }
+            else
+            {
+                isGrounded = false;
+            }
+
             // Send name of object to console
             Debug.Log(hit.transform.name);
 
             // Draw the ray under the player
             Debug.DrawRay(raycastOrigin.position, Vector2.down, Color.green);
-        }
-        else
-        {
-            isGrounded = false;
         }
     }
     

@@ -280,8 +280,8 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 90
-  orthographic: 1
+  field of view: 65
+  orthographic: 0
   orthographic size: 10.876881
   m_Depth: -1
   m_CullingMask:
@@ -779,6 +779,7 @@ MonoBehaviour:
   playerRb: {fileID: 1706927272}
   jumpForce: 5
   raycastOrigin: {fileID: 1179468112}
+  isGrounded: 0
 --- !u!61 &1706927274
 BoxCollider2D:
   m_ObjectHideFlags: 0
