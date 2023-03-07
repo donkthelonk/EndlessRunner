@@ -18,5 +18,9 @@ public class Platform : MonoBehaviour
         //Move Platform
         //transform.Translate(-1, 0, 0);
         transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime;
+        if(transform.position.x < -10)
+        {
+            Destroy(gameObject);
+        }
     }
 }
