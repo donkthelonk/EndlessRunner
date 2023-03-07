@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField] Rigidbody2D playerRb;
     [SerializeField] float jumpForce = 5;
     [SerializeField] Transform raycastOrigin;
+    [SerializeField] bool isGrounded;
 
     // Update is called once per frame
     void Update()
@@ -19,11 +20,16 @@ public class Player : MonoBehaviour
         // hit null check
         if(hit.collider != null)
         {
+            isGrounded = true;
             // Send name of object to console
             Debug.Log(hit.transform.name);
 
             // Draw the ray under the player
             Debug.DrawRay(raycastOrigin.position, Vector2.down, Color.green);
+        }
+        else
+        {
+            isGrounded = false;
         }
     }
     
