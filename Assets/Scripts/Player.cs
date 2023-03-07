@@ -8,14 +8,20 @@ public class Player : MonoBehaviour
     [SerializeField] float jumpForce = 5;
     [SerializeField] Transform raycastOrigin;
     [SerializeField] bool isGrounded;
+    bool jump;
 
     // Update is called once per frame
     void Update()
     {
         CheckForInput();
-        CheckForGrounded();
     }
-    
+
+    void FixedUpdate()
+    {
+        CheckForGrounded();
+        Jump();
+    }
+
     // Logic for user input
     void CheckForInput()
     {
@@ -23,7 +29,7 @@ public class Player : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                playerRb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+                jump = true;
             }
         }
     }
@@ -52,6 +58,17 @@ public class Player : MonoBehaviour
 
             // Draw the ray under the player
             Debug.DrawRay(raycastOrigin.position, Vector2.down, Color.green);
+        }
+    }
+
+    // Jump logic
+    void Jump()
+    {
+        // check if user has pressed jump key; if so, reset jump bool and jump
+        if (jump)
+        {
+            jump = false;
+            playerRb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
     }
 }
