@@ -10,11 +10,30 @@ public class Player : MonoBehaviour
     [SerializeField] Animator anim;
     [SerializeField] bool isGrounded;
     [SerializeField] bool jump;
+    float lastYPos;
+
+    private void Start()
+    {
+        lastYPos = transform.position.y;
+    }
 
     // Update is called once per frame
     void Update()
     {
         CheckForInput();
+
+        // check if player is falling
+        if(transform.position.y < lastYPos)
+        {
+            anim.SetBool("Falling", true);
+        }
+        else
+        {
+            anim.SetBool("Falling", false);
+        }
+
+        // store player Y position
+        lastYPos = transform.position.y;
     }
 
     void FixedUpdate()
@@ -50,12 +69,12 @@ public class Player : MonoBehaviour
             if (hit.distance < 0.1f)
             {
                 isGrounded = true;
-                anim.SetBool("IsGrounded", true);
+                anim.SetBool("isGrounded", true);
             }
             else
             {
                 isGrounded = false;
-                anim.SetBool("IsGrounded", false); ;
+                anim.SetBool("isGrounded", false); ;
             }
 
             // Send name of object to console
