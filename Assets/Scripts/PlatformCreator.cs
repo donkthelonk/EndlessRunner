@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlatformCreator : MonoBehaviour
 {
-    [SerializeField] GameObject platformPrefab;
+    [SerializeField] GameObject[] platformPrefab;
     [SerializeField] Transform referencePoint;
     [SerializeField] GameObject lastCreatedPlatform;
     [SerializeField] float spaceBetweenPlatforms = 2;
@@ -13,7 +13,7 @@ public class PlatformCreator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lastCreatedPlatform = Instantiate(platformPrefab, referencePoint.position, Quaternion.identity);
+        //lastCreatedPlatform = Instantiate(platformPrefab, referencePoint.position, Quaternion.identity);
     }
 
     // Update is called once per frame
@@ -24,7 +24,8 @@ public class PlatformCreator : MonoBehaviour
         {
             // New position to create platform
             Vector3 targetCreationPoint = new Vector3(referencePoint.position.x + lastPlatformWidth + spaceBetweenPlatforms, 0, 0);
-            lastCreatedPlatform = Instantiate(platformPrefab, targetCreationPoint, Quaternion.identity);
+            int randomPlatform = Random.Range(0, platformPrefab.Length);
+            lastCreatedPlatform = Instantiate(platformPrefab[randomPlatform], targetCreationPoint, Quaternion.identity);
 
             // Get width of last platform
             BoxCollider2D collider = lastCreatedPlatform.GetComponent<BoxCollider2D>();

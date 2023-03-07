@@ -359,9 +359,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2c2e8eec3db28641a9df0c1636d82a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformPrefab: {fileID: 4506539386896729348, guid: 4c6b93bc62348634f97d2ce2b3d6959a, type: 3}
+  platformPrefab:
+  - {fileID: 4506539386896729348, guid: 4c6b93bc62348634f97d2ce2b3d6959a, type: 3}
+  - {fileID: 4506539386896729348, guid: d1e9381f4eab87d4eb4afe9f0709b092, type: 3}
   referencePoint: {fileID: 1024572933}
   lastCreatedPlatform: {fileID: 1116346788}
+  spaceBetweenPlatforms: 2
 --- !u!4 &910236667
 Transform:
   m_ObjectHideFlags: 0
@@ -401,7 +404,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024572931}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -454,7 +457,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024572931}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40, y: 0, z: 0}
+  m_LocalPosition: {x: 18.75, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
