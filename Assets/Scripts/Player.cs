@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public float distanceTraveled;
     [SerializeField] UIController uiController;
     [SerializeField] int collectedCoins = 0;
+    [SerializeField] bool airJump;
 
     private void Start()
     {
@@ -106,6 +107,12 @@ public class Player : MonoBehaviour
         lastYPos = transform.position.y;
     }
 
+    // method to call from UIController to get collectedCoins from Player
+    public int GetCollectedCoins()
+    {
+        return collectedCoins;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.transform.CompareTag("Obstacle"))
@@ -122,11 +129,10 @@ public class Player : MonoBehaviour
             collectedCoins++;
             Destroy(collision.gameObject);
         }
-    }
 
-    // method to call from UIController to get collectedCoins from Player
-    public int GetCollectedCoins()
-    {
-        return collectedCoins;
+        if(collision.CompareTag("AirJump"))
+        {
+            airJump = true;
+        }
     }
 }
