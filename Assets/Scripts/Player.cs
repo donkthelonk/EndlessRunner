@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] bool jump;
     float lastYPos;
     public float distanceTraveled;
+    [SerializeField] UIController uiController;
 
     private void Start()
     {
@@ -107,8 +108,8 @@ public class Player : MonoBehaviour
     {
         if(collision.transform.CompareTag("Obstacle"))
         {
-            Debug.Log("Collide with Obstacle");
-
+            //Debug.Log("Collide with Obstacle");
+            uiController.ShowGameOverScreen();
         }
     }
 }

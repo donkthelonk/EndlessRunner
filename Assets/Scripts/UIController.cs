@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
@@ -9,15 +10,7 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject gameOverScreen;
     [SerializeField] Player player;
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.T))
-        {
-            ShowGameOverScreen();
-        }
-    }
-
-    void ShowGameOverScreen()
+    public void ShowGameOverScreen()
     {
         // sets the game over screen to active
         gameOverScreen.SetActive(true);
@@ -31,6 +24,7 @@ public class UIController : MonoBehaviour
 
     public void GameRestart()
     {
-        Debug.Log("GameRestart");
+        //Debug.Log("GameRestart");
+        SceneManager.LoadScene(0);
     }
 }

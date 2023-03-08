@@ -1242,6 +1242,7 @@ MonoBehaviour:
   isGrounded: 0
   jump: 0
   distanceTraveled: 0
+  uiController: {fileID: 387419870}
 --- !u!61 &1706927274
 BoxCollider2D:
   m_ObjectHideFlags: 0
