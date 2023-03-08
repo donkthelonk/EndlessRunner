@@ -1429,7 +1429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRb: {fileID: 1706927272}
-  jumpForce: 10
+  jumpForce: 8
   raycastOrigin: {fileID: 1179468112}
   anim: {fileID: 264930782}
   isGrounded: 0
@@ -1437,6 +1437,7 @@ MonoBehaviour:
   distanceTraveled: 0
   uiController: {fileID: 387419870}
   collectedCoins: 0
+  airJump: 0
 --- !u!61 &1706927274
 BoxCollider2D:
   m_ObjectHideFlags: 0

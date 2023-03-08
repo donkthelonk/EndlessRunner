@@ -39,10 +39,17 @@ public class Player : MonoBehaviour
     // Logic for user input
     void CheckForInput()
     {
-        if(isGrounded)
+        if(isGrounded || airJump)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                // get rid of airjump if not grounded
+                if(airJump && !isGrounded)
+                {
+                    airJump = false;
+                }
+
+                // enable jump
                 jump = true;
 
                 // Triggers the jump animation
@@ -68,7 +75,7 @@ public class Player : MonoBehaviour
             else
             {
                 isGrounded = false;
-                anim.SetBool("isGrounded", false); ;
+                anim.SetBool("isGrounded", false);
             }
 
             // Send name of object to console
@@ -76,6 +83,11 @@ public class Player : MonoBehaviour
 
             // Draw the ray under the player
             Debug.DrawRay(raycastOrigin.position, Vector2.down, Color.green);
+        }
+        else
+        {
+            isGrounded = false;
+            anim.SetBool("isGrounded", false); ;
         }
 
     }
@@ -124,15 +136,18 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Collectable"))
+        // destroy coin on trigger and increase collectedCoins
+        if (collision.CompareTag("Collectable"))
         {
             collectedCoins++;
             Destroy(collision.gameObject);
         }
 
+        // destroy air jump object on trigger and enable airjump
         if(collision.CompareTag("AirJump"))
         {
             airJump = true;
+            Destroy(collision.gameObject);
         }
     }
 }
