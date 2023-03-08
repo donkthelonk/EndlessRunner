@@ -120,4 +120,5 @@ public class Player : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+
 }
