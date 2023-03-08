@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     [SerializeField] UIController uiController;
     [SerializeField] int collectedCoins = 0;
     [SerializeField] bool airJump;
+    [SerializeField] bool hasShield;
 
     private void Start()
     {
@@ -136,17 +137,24 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // destroy coin on trigger and increase collectedCoins
+        // destroy coin and increase collectedCoins 
         if (collision.CompareTag("Collectable"))
         {
             collectedCoins++;
             Destroy(collision.gameObject);
         }
 
-        // destroy air jump object on trigger and enable airjump
+        // destroy air jump powerup object and enable airjump
         if(collision.CompareTag("AirJump"))
         {
             airJump = true;
+            Destroy(collision.gameObject);
+        }
+
+        // destroy shield powerup object 
+        if(collision.CompareTag("Shield"))
+        {
+            hasShield = true;
             Destroy(collision.gameObject);
         }
     }
