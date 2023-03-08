@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     float lastYPos;
     public float distanceTraveled;
     [SerializeField] UIController uiController;
+    [SerializeField] int collectedCoins = 0;
 
     private void Start()
     {
@@ -117,8 +118,14 @@ public class Player : MonoBehaviour
     {
         if(collision.CompareTag("Collectable"))
         {
+            collectedCoins++;
             Destroy(collision.gameObject);
         }
     }
 
+    // method to call from UIController to get collectedCoins from Player
+    public int GetCollectedCoins()
+    {
+        return collectedCoins;
+    }
 }
