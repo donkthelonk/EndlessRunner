@@ -25,6 +25,6 @@ public class UIController : MonoBehaviour
     public void GameRestart()
     {
         //Debug.Log("GameRestart");
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
