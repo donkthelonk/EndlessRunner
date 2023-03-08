@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField] int collectedCoins = 0;
     [SerializeField] bool airJump;
     [SerializeField] bool hasShield;
+    [SerializeField] GameObject shieldBubblePrefab;
 
     private void Start()
     {
@@ -128,10 +129,18 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.transform.CompareTag("Obstacle"))
+        // if the player hits an obstable without a shield, game over
+        if(collision.transform.CompareTag("Obstacle") && !hasShield)
         {
             //Debug.Log("Collide with Obstacle");
             uiController.ShowGameOverScreen();
+        }
+        // if the player hits an obstable with a shield, shield disappears
+        else if(collision.transform.CompareTag("Obstacle") && hasShield)
+        {
+            hasShield = false;
+
+            shieldBubblePrefab.SetActive(false);
         }
     }
 
@@ -155,7 +164,11 @@ public class Player : MonoBehaviour
         if(collision.CompareTag("Shield"))
         {
             hasShield = true;
+
+            // destroy the shield powerup object
             Destroy(collision.gameObject);
+
+            shieldBubblePrefab.SetActive(true);
         }
     }
 }
