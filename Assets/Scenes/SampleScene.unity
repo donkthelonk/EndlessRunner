@@ -313,6 +313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 387419869}
+  - component: {fileID: 387419870}
   m_Layer: 0
   m_Name: UIController
   m_TagString: Untagged
@@ -335,6 +336,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &387419870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387419868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 820b53faf7fef4c4a85a5a004781272c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceTraveled: {fileID: 876261657}
+  gameOverScreen: {fileID: 678637706}
+  player: {fileID: 1706927273}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,7 +539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &678637707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1226,6 +1242,7 @@ MonoBehaviour:
   anim: {fileID: 264930782}
   isGrounded: 0
   jump: 0
+  distanceTraveled: 0
 --- !u!61 &1706927274
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1418,7 +1435,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1985903822}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 387419870}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: GameRestart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1985903822
 MonoBehaviour:
   m_ObjectHideFlags: 0

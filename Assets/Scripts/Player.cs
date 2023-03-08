@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] bool isGrounded;
     [SerializeField] bool jump;
     float lastYPos;
+    public float distanceTraveled;
 
     private void Start()
     {
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        distanceTraveled += Time.deltaTime;
         CheckForInput();
         CheckForFalling();
     }
