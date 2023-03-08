@@ -154,14 +154,16 @@ public class Player : MonoBehaviour
         }
 
         // destroy air jump powerup object and enable airjump
-        if(collision.CompareTag("AirJump"))
+        if(collision.CompareTag("AirJump") && !airJump)
         {
             airJump = true;
+
+            // destroy the airjump powerup object
             Destroy(collision.gameObject);
         }
 
         // destroy shield powerup object 
-        if(collision.CompareTag("Shield"))
+        if(collision.CompareTag("Shield") && !hasShield)
         {
             hasShield = true;
 

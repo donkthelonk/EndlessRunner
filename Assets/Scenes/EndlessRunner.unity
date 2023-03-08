@@ -820,6 +820,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5335512283188281626, guid: 3f177d31bc337834b8db645cd69ad723, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5437940135510822988, guid: 3f177d31bc337834b8db645cd69ad723, type: 3}
       propertyPath: m_Name
       value: ShieldBubble
