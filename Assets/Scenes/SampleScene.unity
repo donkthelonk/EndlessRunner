@@ -735,8 +735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformPrefab:
-  - {fileID: 4506539386896729348, guid: 4c6b93bc62348634f97d2ce2b3d6959a, type: 3}
-  - {fileID: 3126649725584320299, guid: 318736840cceafb4baf1199672f32ce6, type: 3}
+  - {fileID: 6886873956379325490, guid: 0c1d6d3dafcac2645ac4ea86f33b0edc, type: 3}
   referencePoint: {fileID: 1024572933}
   lastCreatedPlatform: {fileID: 1116346788}
   spaceBetweenPlatforms: 2

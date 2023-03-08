@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
             }
 
             // Send name of object to console
-            Debug.Log(hit.transform.name);
+            //Debug.Log(hit.transform.name);
 
             // Draw the ray under the player
             Debug.DrawRay(raycastOrigin.position, Vector2.down, Color.green);
@@ -101,5 +101,14 @@ public class Player : MonoBehaviour
 
         // store player Y position
         lastYPos = transform.position.y;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.transform.CompareTag("Obstacle"))
+        {
+            Debug.Log("Collide with Obstacle");
+
+        }
     }
 }
