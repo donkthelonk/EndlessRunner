@@ -563,6 +563,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e429b642171d84da56a181f0296d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  environmentElement:
+  - {fileID: 7081450866546860414, guid: 6a17d659a652a0e469f38a7bae715c13, type: 3}
+  - {fileID: 1031620899739688009, guid: a1587737640b1034cbf20eef4c795940, type: 3}
+  - {fileID: 7950686848979100739, guid: 5e8b67769b9c3974da1e3ca161137e20, type: 3}
+  referencePoint: {fileID: 1024572933}
 --- !u!4 &439076076
 Transform:
   m_ObjectHideFlags: 0
@@ -778,7 +783,7 @@ MonoBehaviour:
   smoothTime: 0.5
   lookAtPlayer: 0
   lowerLimit: -5
-  offset: 0
+  offset: 2
 --- !u!1 &607528698
 GameObject:
   m_ObjectHideFlags: 0
