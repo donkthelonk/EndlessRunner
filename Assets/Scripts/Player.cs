@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     [SerializeField] bool hasShield;
     [SerializeField] GameObject shieldBubblePrefab;
     [SerializeField] bool isGameOver;
+    [SerializeField] SFXManager sfxManager;
 
     private void Start()
     {
@@ -179,6 +180,7 @@ public class Player : MonoBehaviour
         if (collision.CompareTag("Collectable"))
         {
             collectedCoins++;
+            sfxManager.PlaySFX("Coin");
             Destroy(collision.gameObject);
         }
 

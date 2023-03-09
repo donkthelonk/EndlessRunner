@@ -10,6 +10,7 @@ public class UIController : MonoBehaviour
     [SerializeField] Text collectedCoins;
     [SerializeField] GameObject gameOverScreen;
     [SerializeField] Player player;
+    [SerializeField] GameObject gameMusic;
 
     public void ShowGameOverScreen()
     {
@@ -24,6 +25,9 @@ public class UIController : MonoBehaviour
 
         // display number of coins collected in text field
         collectedCoins.text = "Coins Collected: " + player.GetCollectedCoins();
+
+        // turn off game music
+        gameMusic.SetActive(false);
     }
 
     public void GameRestart()
