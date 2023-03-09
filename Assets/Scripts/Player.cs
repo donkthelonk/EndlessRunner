@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    float lastYPos;
     public float distanceTraveled;
+
     [SerializeField] Rigidbody2D playerRb;
     [SerializeField] Transform raycastOrigin;
     [SerializeField] Animator anim;
@@ -20,6 +20,9 @@ public class Player : MonoBehaviour
     [SerializeField] bool hasShield;
     [SerializeField] bool isGrounded;
     [SerializeField] bool isGameOver;
+
+    float lastYPos;
+
 
 
     private void Start()

@@ -8,8 +8,10 @@ public class PlatformCreator : MonoBehaviour
     [SerializeField] Transform referencePoint;
     [SerializeField] GameObject lastCreatedPlatform;
     [SerializeField] float spaceBetweenPlatforms = 2;
-    private float lastPlatformWidth;
     [SerializeField] Player player;
+
+    float lastPlatformWidth;
+
 
     // Start is called before the first frame update
     void Start()
