@@ -132,10 +132,11 @@ public class Player : MonoBehaviour
         // Obstacle collisions
         if(collision.transform.CompareTag("Obstacle"))
         {
-            // if player has shield, deactivate shield
+            // if player has shield, deactivate shield and destroy obstacle
             if(hasShield)
             {
                 hasShield = false;
+                Destroy(collision.gameObject);
                 shieldBubblePrefab.SetActive(false);
             }
             // if not, game over
@@ -143,6 +144,12 @@ public class Player : MonoBehaviour
             {
                 uiController.ShowGameOverScreen();
             }
+        }
+
+        // Deathbox collisions
+        if(collision.transform.CompareTag("Deathbox"))
+        {
+            uiController.ShowGameOverScreen();
         }
     }
 

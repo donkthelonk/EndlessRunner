@@ -1089,8 +1089,8 @@ GameObject:
   - component: {fileID: 1198201668}
   - component: {fileID: 1198201670}
   m_Layer: 0
-  m_Name: Deadbox
-  m_TagString: Obstacle
+  m_Name: Deathbox
+  m_TagString: Deathbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
