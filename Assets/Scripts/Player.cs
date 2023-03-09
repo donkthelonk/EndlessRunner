@@ -178,8 +178,16 @@ public class Player : MonoBehaviour
             // if player has shield, deactivate shield and destroy obstacle
             if(hasShield)
             {
+                // disable shield
                 hasShield = false;
+
+                // destroy the obstacle
                 Destroy(collision.gameObject);
+
+                // play shield break sfx
+                sfxManager.PlaySFX("ShieldBreak");
+
+                // hide shield sprite
                 shieldBubblePrefab.SetActive(false);
             }
             // if not, game over
@@ -219,16 +227,18 @@ public class Player : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        // destroy shield powerup object 
+        // destroy shield powerup object and enable shield
         if(collision.CompareTag("Shield") && !hasShield)
         {
             hasShield = true;
-            
-            // play shield sfx
+
+            // play powerup shield sfx
+            sfxManager.PlaySFX("PowerupShield");
 
             // destroy the shield powerup object
             Destroy(collision.gameObject);
 
+            // turn on shield
             shieldBubblePrefab.SetActive(true);
         }
     }

@@ -12,6 +12,7 @@ public class SFXManager : MonoBehaviour
     [SerializeField] AudioClip landSFX;
     [SerializeField] AudioClip gameOverHitSFX;
     [SerializeField] AudioClip powerupShieldSFX;
+    [SerializeField] AudioClip shieldBreakSFX;
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +56,16 @@ public class SFXManager : MonoBehaviour
         if (clipToPlay == "GameOverHit")
         {
             audioSource.clip = gameOverHitSFX;
+        }
+
+        if(clipToPlay == "PowerupShield")
+        {
+            audioSource.clip = powerupShieldSFX;
+        }
+
+        if (clipToPlay == "ShieldBreak")
+        {
+            audioSource.clip = shieldBreakSFX;
         }
 
         audioSource.Play();

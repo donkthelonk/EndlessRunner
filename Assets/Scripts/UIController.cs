@@ -34,5 +34,8 @@ public class UIController : MonoBehaviour
     {
         //Debug.Log("GameRestart");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        // restart time
+        Time.timeScale = 1;
     }
 }
