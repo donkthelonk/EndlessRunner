@@ -1863,6 +1863,7 @@ MonoBehaviour:
   doubleJumpSFX: {fileID: 8300000, guid: 6e77bebaa90ea3a489bbb7d4b8f68f89, type: 3}
   powerupDoubleJumpSFX: {fileID: 8300000, guid: ece4cafda9dad794599591f0a6dff494, type: 3}
   landSFX: {fileID: 8300000, guid: 816903057e367334b9b26429c18bfc63, type: 3}
+  gameOverHitSFX: {fileID: 8300000, guid: 84ea4fed28917614991517d0fd07f752, type: 3}
 --- !u!4 &1364906020
 Transform:
   m_ObjectHideFlags: 0
@@ -2301,11 +2302,12 @@ MonoBehaviour:
   distanceTraveled: 0
   uiController: {fileID: 387419870}
   collectedCoins: 0
-  airJump: 1
+  airJump: 0
   hasShield: 0
   shieldBubblePrefab: {fileID: 2020948413}
   isGameOver: 0
   sfxManager: {fileID: 1364906019}
+  isLanding: 0
 --- !u!61 &1706927274
 BoxCollider2D:
   m_ObjectHideFlags: 0

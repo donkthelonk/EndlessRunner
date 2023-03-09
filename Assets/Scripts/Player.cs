@@ -184,6 +184,7 @@ public class Player : MonoBehaviour
             // if not, game over
             else
             {
+                sfxManager.PlaySFX("GameOverHit");
                 GameOver();
             }
         }
