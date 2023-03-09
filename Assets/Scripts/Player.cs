@@ -129,18 +129,20 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // if the player hits an obstable without a shield, game over
-        if(collision.transform.CompareTag("Obstacle") && !hasShield)
+        // Obstacle collisions
+        if(collision.transform.CompareTag("Obstacle"))
         {
-            //Debug.Log("Collide with Obstacle");
-            uiController.ShowGameOverScreen();
-        }
-        // if the player hits an obstable with a shield, shield disappears
-        else if(collision.transform.CompareTag("Obstacle") && hasShield)
-        {
-            hasShield = false;
-
-            shieldBubblePrefab.SetActive(false);
+            // if player has shield, deactivate shield
+            if(hasShield)
+            {
+                hasShield = false;
+                shieldBubblePrefab.SetActive(false);
+            }
+            // if not, game over
+            else
+            {
+                uiController.ShowGameOverScreen();
+            }
         }
     }
 
