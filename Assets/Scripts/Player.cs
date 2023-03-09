@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] Rigidbody2D playerRb;
-    [SerializeField] float jumpForce = 5;
-    [SerializeField] Transform raycastOrigin;
-    [SerializeField] Animator anim;
-    [SerializeField] bool isGrounded;
-    [SerializeField] bool jump;
     float lastYPos;
     public float distanceTraveled;
+    [SerializeField] Rigidbody2D playerRb;
+    [SerializeField] Transform raycastOrigin;
+    [SerializeField] Animator anim;
     [SerializeField] UIController uiController;
+    [SerializeField] GameObject shieldBubblePrefab;
+    [SerializeField] SFXManager sfxManager;
+    [SerializeField] float jumpForce = 5;
     [SerializeField] int collectedCoins = 0;
+    [SerializeField] bool jump;
+    [SerializeField] bool isLanding;
     [SerializeField] bool airJump;
     [SerializeField] bool hasShield;
-    [SerializeField] GameObject shieldBubblePrefab;
+    [SerializeField] bool isGrounded;
     [SerializeField] bool isGameOver;
-    [SerializeField] SFXManager sfxManager;
-    [SerializeField] bool isLanding;
+
 
     private void Start()
     {
@@ -210,7 +211,10 @@ public class Player : MonoBehaviour
         if(collision.CompareTag("AirJump") && !airJump)
         {
             airJump = true;
-            // add sfx for air jump powerup
+
+            // play double jump powerup sfx
+            sfxManager.PlaySFX("PowerupDoubleJump");
+
             // destroy the airjump powerup object
             Destroy(collision.gameObject);
         }
@@ -219,7 +223,9 @@ public class Player : MonoBehaviour
         if(collision.CompareTag("Shield") && !hasShield)
         {
             hasShield = true;
-            // add sfx for shield powerup
+            
+            // play shield sfx
+
             // destroy the shield powerup object
             Destroy(collision.gameObject);
 

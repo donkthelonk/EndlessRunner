@@ -11,6 +11,7 @@ public class SFXManager : MonoBehaviour
     [SerializeField] AudioClip powerupDoubleJumpSFX;
     [SerializeField] AudioClip landSFX;
     [SerializeField] AudioClip gameOverHitSFX;
+    [SerializeField] AudioClip powerupShieldSFX;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,11 @@ public class SFXManager : MonoBehaviour
         if(clipToPlay == "DoubleJump")
         {
             audioSource.clip = doubleJumpSFX;
+        }
+
+        if(clipToPlay == "PowerupDoubleJump")
+        {
+            audioSource.clip = powerupDoubleJumpSFX;
         }
 
         if (clipToPlay == "Land")
