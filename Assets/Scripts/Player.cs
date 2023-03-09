@@ -103,6 +103,18 @@ public class Player : MonoBehaviour
         if (jump)
         {
             jump = false;
+
+            // if air jump enabled, play air jump sfx
+            if(airJump)
+            {
+                // add sfx for air jump
+            }
+            // if not, play normal jump sfx
+            else
+            {
+                sfxManager.PlaySFX("Jump");
+            }
+
             playerRb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
     }
@@ -188,7 +200,7 @@ public class Player : MonoBehaviour
         if(collision.CompareTag("AirJump") && !airJump)
         {
             airJump = true;
-
+            // add sfx for air jump powerup
             // destroy the airjump powerup object
             Destroy(collision.gameObject);
         }
@@ -197,7 +209,7 @@ public class Player : MonoBehaviour
         if(collision.CompareTag("Shield") && !hasShield)
         {
             hasShield = true;
-
+            // add sfx for shield powerup
             // destroy the shield powerup object
             Destroy(collision.gameObject);
 

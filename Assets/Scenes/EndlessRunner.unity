@@ -1859,6 +1859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1364906021}
   coinSFX: {fileID: 8300000, guid: 0f138517d39df9042aa1d7ac91839a51, type: 3}
+  jumpSFX: {fileID: 8300000, guid: f3d4c2b19913aea4694d16f2c0aca71b, type: 3}
 --- !u!4 &1364906020
 Transform:
   m_ObjectHideFlags: 0
