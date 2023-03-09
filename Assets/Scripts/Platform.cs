@@ -10,10 +10,11 @@ public class Platform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Move Platform
-        //transform.Translate(-1, 0, 0);
+        // Move Platform
         transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime;
-        if(transform.position.x < -leftLimit)
+
+        // destroy object once it reaches the left limit
+        if (transform.position.x < -leftLimit)
         {
             Destroy(gameObject);
         }

@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] bool airJump;
     [SerializeField] bool hasShield;
     [SerializeField] GameObject shieldBubblePrefab;
+    [SerializeField] bool isGameOver;
 
     private void Start()
     {
@@ -27,7 +28,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distanceTraveled += Time.deltaTime;
+        IncreaseDistanceTraveled();
         CheckForInput();
         CheckForFalling();
     }
@@ -127,6 +128,22 @@ public class Player : MonoBehaviour
         return collectedCoins;
     }
 
+    private void IncreaseDistanceTraveled()
+    {
+        distanceTraveled += Time.deltaTime;
+    }
+
+    private void GameOver()
+    {
+        isGameOver = true;
+        uiController.ShowGameOverScreen();
+    }
+
+    public bool IsGameOver()
+    {
+        return isGameOver;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Obstacle collisions
@@ -142,14 +159,14 @@ public class Player : MonoBehaviour
             // if not, game over
             else
             {
-                uiController.ShowGameOverScreen();
+                GameOver();
             }
         }
 
         // Deathbox collisions
         if(collision.transform.CompareTag("Deathbox"))
         {
-            uiController.ShowGameOverScreen();
+            GameOver();
         }
     }
 
