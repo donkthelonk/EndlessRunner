@@ -22,7 +22,7 @@ public class EnvironmentController : MonoBehaviour
     IEnumerator CreateEnvironmentElement()
     {
         // create offset to spawn environmet elements farther to the right
-        Vector3 offset = new Vector3(10, 2, 0);
+        Vector3 offset = new Vector3(10, 1, 0);
 
         Instantiate(environmentElement[Random.Range(0, environmentElement.Length)], referencePoint.position + offset, Quaternion.identity);
         yield return new WaitForSeconds(Random.Range(3, 6));
