@@ -10,11 +10,13 @@ public class Sky : MonoBehaviour
 
     public void PlayNightSound()
     {
-
+        audioSource.clip = nightSound;
+        audioSource.Play();
     }
 
     public void PlayDaySound()
     {
-
+        audioSource.clip = daySound;
+        audioSource.Play();
     }
 }
