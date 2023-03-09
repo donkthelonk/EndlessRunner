@@ -137,6 +137,9 @@ public class Player : MonoBehaviour
     {
         isGameOver = true;
         uiController.ShowGameOverScreen();
+
+        // stop time
+        Time.timeScale = 0;
     }
 
     public bool IsGameOver()
