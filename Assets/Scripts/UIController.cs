@@ -21,7 +21,7 @@ public class UIController : MonoBehaviour
         float roundedDistance = Mathf.Ceil(player.distanceTraveled);
 
         // display roundedDistance in text field
-        distanceTraveled.text = roundedDistance.ToString() + " m";
+        distanceTraveled.text = "Meters Traveled: " + roundedDistance;
 
         // display number of coins collected in text field
         collectedCoins.text = "Coins Collected: " + player.GetCollectedCoins();
