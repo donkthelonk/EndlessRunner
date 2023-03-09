@@ -7,6 +7,8 @@ public class SFXManager : MonoBehaviour
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip coinSFX;
     [SerializeField] AudioClip jumpSFX;
+    [SerializeField] AudioClip doubleJumpSFX;
+    [SerializeField] AudioClip powerupDoubleJumpSFX;
 
     // Start is called before the first frame update
     void Start()
@@ -27,9 +29,14 @@ public class SFXManager : MonoBehaviour
             audioSource.clip = coinSFX;
         }
 
-        if(clipToPlay == "Jump")
+        if (clipToPlay == "Jump")
         {
             audioSource.clip = jumpSFX;
+        }
+
+        if(clipToPlay == "DoubleJump")
+        {
+            audioSource.clip = doubleJumpSFX;
         }
 
         audioSource.Play();

@@ -1860,6 +1860,8 @@ MonoBehaviour:
   audioSource: {fileID: 1364906021}
   coinSFX: {fileID: 8300000, guid: 0f138517d39df9042aa1d7ac91839a51, type: 3}
   jumpSFX: {fileID: 8300000, guid: f3d4c2b19913aea4694d16f2c0aca71b, type: 3}
+  doubleJumpSFX: {fileID: 8300000, guid: 6e77bebaa90ea3a489bbb7d4b8f68f89, type: 3}
+  powerupDoubleJumpSFX: {fileID: 8300000, guid: ece4cafda9dad794599591f0a6dff494, type: 3}
 --- !u!4 &1364906020
 Transform:
   m_ObjectHideFlags: 0
@@ -2298,7 +2300,7 @@ MonoBehaviour:
   distanceTraveled: 0
   uiController: {fileID: 387419870}
   collectedCoins: 0
-  airJump: 0
+  airJump: 1
   hasShield: 0
   shieldBubblePrefab: {fileID: 2020948413}
   isGameOver: 0
@@ -2345,7 +2347,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1731806951
 AudioSource:
   m_ObjectHideFlags: 0

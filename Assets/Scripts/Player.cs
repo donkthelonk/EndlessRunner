@@ -104,15 +104,16 @@ public class Player : MonoBehaviour
         {
             jump = false;
 
-            // if air jump enabled, play air jump sfx
-            if(airJump)
-            {
-                // add sfx for air jump
-            }
-            // if not, play normal jump sfx
-            else
+            // if grounded enabled, play normal jump sfx
+            if (isGrounded)
             {
                 sfxManager.PlaySFX("Jump");
+                
+            }
+            // if not grounded enabled, play double jump sfx
+            else
+            {
+                sfxManager.PlaySFX("DoubleJump");
             }
 
             playerRb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
