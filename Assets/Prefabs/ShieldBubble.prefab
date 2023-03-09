@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4700239614307334211}
   - component: {fileID: 5335512283188281626}
-  - component: {fileID: 818682555060107706}
   - component: {fileID: 8471453827941853936}
   m_Layer: 0
   m_Name: ShieldBubble
@@ -86,22 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &818682555060107706
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5437940135510822988}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.28
 --- !u!114 &8471453827941853936
 MonoBehaviour:
   m_ObjectHideFlags: 0

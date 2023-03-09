@@ -737,7 +737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformPrefab:
-  - {fileID: 6886873956379325490, guid: 0c1d6d3dafcac2645ac4ea86f33b0edc, type: 3}
+  - {fileID: 5011930797325101711, guid: cfb3a9013d1daa940a4206a005dbb75b, type: 3}
   referencePoint: {fileID: 1024572933}
   lastCreatedPlatform: {fileID: 1116346788}
   spaceBetweenPlatforms: 2
@@ -769,15 +769,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4700239614307334211, guid: 3f177d31bc337834b8db645cd69ad723, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.25
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4700239614307334211, guid: 3f177d31bc337834b8db645cd69ad723, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.25
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4700239614307334211, guid: 3f177d31bc337834b8db645cd69ad723, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.25
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4700239614307334211, guid: 3f177d31bc337834b8db645cd69ad723, type: 3}
       propertyPath: m_LocalPosition.x
