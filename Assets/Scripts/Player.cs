@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject shieldBubblePrefab;
     [SerializeField] bool isGameOver;
     [SerializeField] SFXManager sfxManager;
+    [SerializeField] bool isLanding;
 
     private void Start()
     {
@@ -73,7 +74,14 @@ public class Player : MonoBehaviour
         {
             if (hit.distance < 0.1f)
             {
+                // play landing sound if initially landing
+                if (!isGrounded)
+                {
+                    sfxManager.PlaySFX("Land");
+                }
+
                 isGrounded = true;
+
                 anim.SetBool("isGrounded", true);
             }
             else

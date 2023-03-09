@@ -1862,6 +1862,7 @@ MonoBehaviour:
   jumpSFX: {fileID: 8300000, guid: f3d4c2b19913aea4694d16f2c0aca71b, type: 3}
   doubleJumpSFX: {fileID: 8300000, guid: 6e77bebaa90ea3a489bbb7d4b8f68f89, type: 3}
   powerupDoubleJumpSFX: {fileID: 8300000, guid: ece4cafda9dad794599591f0a6dff494, type: 3}
+  landSFX: {fileID: 8300000, guid: 816903057e367334b9b26429c18bfc63, type: 3}
 --- !u!4 &1364906020
 Transform:
   m_ObjectHideFlags: 0
