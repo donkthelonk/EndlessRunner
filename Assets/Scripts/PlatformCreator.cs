@@ -29,7 +29,7 @@ public class PlatformCreator : MonoBehaviour
         if (lastCreatedPlatform.transform.position.x < referencePoint.position.x)
         {
             // New position to create platform
-            Vector3 targetCreationPoint = new Vector3(referencePoint.position.x + lastPlatformWidth + spaceBetweenPlatforms, 0, 0);
+            Vector3 targetCreationPoint = new Vector3(referencePoint.position.x + lastPlatformWidth + spaceBetweenPlatforms, referencePoint.position.y, 0);
             int randomPlatformIndex = Random.Range(0, platformPrefab.Length);
             lastCreatedPlatform = Instantiate(platformPrefab[randomPlatformIndex], targetCreationPoint, Quaternion.identity);
 
