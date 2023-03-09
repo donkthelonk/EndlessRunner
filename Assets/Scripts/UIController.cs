@@ -20,7 +20,7 @@ public class UIController : MonoBehaviour
         // remove decimal places from player.distanceTraveled
         float roundedDistance = Mathf.Ceil(player.distanceTraveled);
 
-        // display roundedDistance in text field
+        // display meters traveled using roundedDistance
         distanceTraveled.text = "Meters Traveled: " + roundedDistance;
 
         // display number of coins collected in text field
