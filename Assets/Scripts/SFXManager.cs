@@ -5,69 +5,50 @@ using UnityEngine;
 public class SFXManager : MonoBehaviour
 {
     [SerializeField] AudioSource audioSource;
-    [SerializeField] AudioClip coinSFX;
-    [SerializeField] AudioClip jumpSFX;
-    [SerializeField] AudioClip doubleJumpSFX;
-    [SerializeField] AudioClip powerupDoubleJumpSFX;
-    [SerializeField] AudioClip landSFX;
-    [SerializeField] AudioClip gameOverHitSFX;
-    [SerializeField] AudioClip powerupShieldSFX;
-    [SerializeField] AudioClip shieldBreakSFX;
+    [SerializeField] AudioClip coin;
+    [SerializeField] AudioClip jump;
+    [SerializeField] AudioClip doubleJump;
+    [SerializeField] AudioClip powerupDoubleJump;
+    [SerializeField] AudioClip land;
+    [SerializeField] AudioClip gameOverHit;
+    [SerializeField] AudioClip powerupShield;
+    [SerializeField] AudioClip shieldBreak;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // Play SFX given the clipToPlay
     public void PlaySFX(string clipToPlay)
     {
-        if(clipToPlay == "Coin")
+        // assign approprite audio clip given clipToPlay
+        switch (clipToPlay)
         {
-            audioSource.clip = coinSFX;
+            case "Coin":
+                audioSource.clip = coin;
+                break;
+            case "Jump":
+                audioSource.clip = jump;
+                break;
+            case "DoubleJump":
+                audioSource.clip = doubleJump;
+                break;
+            case "PowerupDoubleJump":
+                audioSource.clip = powerupDoubleJump;
+                break;
+            case "Land":
+                audioSource.clip = land;
+                break;
+            case "GameOverHit":
+                audioSource.clip = gameOverHit;
+                break;
+            case "PowerupShield":
+                audioSource.clip = powerupShield;
+                break;
+            case "ShieldBreak":
+                audioSource.clip = shieldBreak;
+                break;
+            default:
+                break;
         }
 
-        if (clipToPlay == "Jump")
-        {
-            audioSource.clip = jumpSFX;
-        }
-
-        if(clipToPlay == "DoubleJump")
-        {
-            audioSource.clip = doubleJumpSFX;
-        }
-
-        if(clipToPlay == "PowerupDoubleJump")
-        {
-            audioSource.clip = powerupDoubleJumpSFX;
-        }
-
-        if (clipToPlay == "Land")
-        {
-            audioSource.clip = landSFX;
-        }
-
-        if (clipToPlay == "GameOverHit")
-        {
-            audioSource.clip = gameOverHitSFX;
-        }
-
-        if(clipToPlay == "PowerupShield")
-        {
-            audioSource.clip = powerupShieldSFX;
-        }
-
-        if (clipToPlay == "ShieldBreak")
-        {
-            audioSource.clip = shieldBreakSFX;
-        }
-
+        // play the audio clip assigned
         audioSource.Play();
     }
 }
