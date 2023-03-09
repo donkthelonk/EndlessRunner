@@ -30,8 +30,8 @@ public class PlatformCreator : MonoBehaviour
         {
             // New position to create platform
             Vector3 targetCreationPoint = new Vector3(referencePoint.position.x + lastPlatformWidth + spaceBetweenPlatforms, 0, 0);
-            int randomPlatform = Random.Range(0, platformPrefab.Length);
-            lastCreatedPlatform = Instantiate(platformPrefab[randomPlatform], targetCreationPoint, Quaternion.identity);
+            int randomPlatformIndex = Random.Range(0, platformPrefab.Length);
+            lastCreatedPlatform = Instantiate(platformPrefab[randomPlatformIndex], targetCreationPoint, Quaternion.identity);
 
             // Get width of last platform
             BoxCollider2D collider = lastCreatedPlatform.GetComponent<BoxCollider2D>();
