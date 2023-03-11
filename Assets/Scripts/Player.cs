@@ -23,8 +23,6 @@ public class Player : MonoBehaviour
 
     float lastYPos;
 
-
-
     private void Start()
     {
         // initialize player Y position

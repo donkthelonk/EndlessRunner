@@ -103,7 +103,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.30114037, y: -0.023249507}
+  m_Offset: {x: 0.14967635, y: -0.023249507}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -114,7 +114,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.32944202, y: 1.046499}
+  m_Size: {x: 0.32917494, y: 1.046499}
   m_EdgeRadius: 0
 --- !u!114 &4506539386896729344
 MonoBehaviour:
@@ -155,7 +155,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7467264781527941159}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3, y: -5.15, z: 0}
+  m_LocalPosition: {x: 0.14891234, y: -5.15, z: 0}
   m_LocalScale: {x: 0.1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -239,7 +239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1845957888453152501, guid: 783b2d76dfbfa2942bc14b70865f632e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.30108768
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 1845957888453152501, guid: 783b2d76dfbfa2942bc14b70865f632e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -309,7 +309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1845957888453152501, guid: 783b2d76dfbfa2942bc14b70865f632e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.30108768
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 1845957888453152501, guid: 783b2d76dfbfa2942bc14b70865f632e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -379,7 +379,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1845957888453152501, guid: 783b2d76dfbfa2942bc14b70865f632e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.30108768
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 1845957888453152501, guid: 783b2d76dfbfa2942bc14b70865f632e, type: 3}
       propertyPath: m_LocalPosition.y
