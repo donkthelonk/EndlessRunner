@@ -108,7 +108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5011930795572972915}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: -1.46, z: 0}
+  m_LocalPosition: {x: 1.28, y: -1.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -562,7 +562,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5011930796527402782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: -1.46, z: 0}
+  m_LocalPosition: {x: 1.28, y: -1.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -935,7 +935,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5011930797315678277}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: -1.46, z: 0}
+  m_LocalPosition: {x: 1.28, y: -1.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1000,7 +1000,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 10.366137, y: 0.0022756606}
+  m_Offset: {x: 7.659683, y: 0.0022756457}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1011,7 +1011,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15.260918, y: 0.62767136}
+  m_Size: {x: 15.265877, y: 0.62767136}
   m_EdgeRadius: 0
 --- !u!61 &5011930797325101707
 BoxCollider2D:
@@ -1026,7 +1026,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 10.18009, y: 3.5789037}
+  m_Offset: {x: 7.4562683, y: 3.5789037}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1037,7 +1037,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.5845222, y: 0.64791036}
+  m_Size: {x: 7.6043696, y: 0.6479101}
   m_EdgeRadius: 0
 --- !u!61 &5011930797325101708
 BoxCollider2D:
@@ -1052,7 +1052,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 16.89162, y: 6.458089}
+  m_Offset: {x: 14.177723, y: 6.458089}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1063,7 +1063,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.4015884, y: 0.1715374}
+  m_Size: {x: 3.4214325, y: 0.1715374}
   m_EdgeRadius: 0
 --- !u!251 &5011930797325101706
 PlatformEffector2D:
@@ -1115,7 +1115,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1845957888453152501, guid: 783b2d76dfbfa2942bc14b70865f632e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.672105
+      value: 1.9521048
       objectReference: {fileID: 0}
     - target: {fileID: 1845957888453152501, guid: 783b2d76dfbfa2942bc14b70865f632e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1177,7 +1177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1845957888453152501, guid: 783b2d76dfbfa2942bc14b70865f632e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.13
+      value: 9.41
       objectReference: {fileID: 0}
     - target: {fileID: 1845957888453152501, guid: 783b2d76dfbfa2942bc14b70865f632e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1239,7 +1239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1845957888453152501, guid: 783b2d76dfbfa2942bc14b70865f632e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.21
+      value: 7.49
       objectReference: {fileID: 0}
     - target: {fileID: 1845957888453152501, guid: 783b2d76dfbfa2942bc14b70865f632e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1301,7 +1301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1845957888453152501, guid: 783b2d76dfbfa2942bc14b70865f632e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.2
+      value: 5.4799995
       objectReference: {fileID: 0}
     - target: {fileID: 1845957888453152501, guid: 783b2d76dfbfa2942bc14b70865f632e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1363,7 +1363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5856409733236691709, guid: 1c8807a8a96af604e958c2e13b1ffc74, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.906076
+      value: 14.186076
       objectReference: {fileID: 0}
     - target: {fileID: 5856409733236691709, guid: 1c8807a8a96af604e958c2e13b1ffc74, type: 3}
       propertyPath: m_LocalPosition.y
