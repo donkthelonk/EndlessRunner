@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class MainMenuController : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -17,6 +17,7 @@ public class MainMenu : MonoBehaviour
         
     }
 
+    // Method for the Start Button
     public void StartGame()
     {
         SceneManager.LoadScene("EndlessRunner");
