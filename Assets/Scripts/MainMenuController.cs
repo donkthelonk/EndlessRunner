@@ -26,6 +26,7 @@ public class MainMenuController : MonoBehaviour
         SceneManager.LoadScene("EndlessRunner");
     }
 
+    // Hides Tutorial Menu and displays the Start Menu
     public void BackButton()
     {
         // Disable Tutorial Menu
@@ -35,6 +36,7 @@ public class MainMenuController : MonoBehaviour
         startMenu.SetActive(true);
     }
 
+    // Hides the Start Menu and displays the Tutorial Menu 
     public void HowToPlayButton()
     {
         // Enable Tutorial Menu
@@ -42,5 +44,11 @@ public class MainMenuController : MonoBehaviour
 
         // Disable Start Menu
         startMenu.SetActive(false);
+    }
+
+    // Exit Application
+    public void ExitButton()
+    {
+        Application.Quit();
     }
 }
