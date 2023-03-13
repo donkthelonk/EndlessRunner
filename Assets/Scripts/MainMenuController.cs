@@ -25,4 +25,22 @@ public class MainMenuController : MonoBehaviour
     {
         SceneManager.LoadScene("EndlessRunner");
     }
+
+    public void BackButton()
+    {
+        // Disable Tutorial Menu
+        tutorialMenu.SetActive(false);
+
+        // Enable Start Menu
+        startMenu.SetActive(true);
+    }
+
+    public void HowToPlayButton()
+    {
+        // Enable Tutorial Menu
+        tutorialMenu.SetActive(true);
+
+        // Disable Start Menu
+        startMenu.SetActive(false);
+    }
 }
