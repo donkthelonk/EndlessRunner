@@ -44,4 +44,13 @@ public class UIController : MonoBehaviour
         // restart time
         Time.timeScale = 1;
     }
+
+    public void BackToMenu()
+    {
+        // Restart time
+        Time.timeScale = 1;
+
+        // Load Main Menu scene
+        SceneManager.LoadScene("MainMenu");
+    }
 }
