@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
+    [SerializeField] GameObject startMenu;
+    [SerializeField] GameObject tutorialMenu;
+
     // Start is called before the first frame update
     void Start()
     {
