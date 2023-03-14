@@ -2897,13 +2897,15 @@ MonoBehaviour:
   shieldBubblePrefab: {fileID: 2020948413}
   sfxManager: {fileID: 1364906019}
   jumpForce: 10
+  jumpCooldown: 0.5
   collectedCoins: 0
   jump: 0
   isLanding: 0
-  airJump: 1
+  airJump: 0
   hasShield: 0
   isGrounded: 0
   isGameOver: 0
+  isJumpCooldown: 0
 --- !u!61 &1706927274
 BoxCollider2D:
   m_ObjectHideFlags: 0
