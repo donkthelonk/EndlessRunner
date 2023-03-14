@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject shieldBubblePrefab;
     [SerializeField] SFXManager sfxManager;
     [SerializeField] float jumpForce = 5;
+    [SerializeField] float jumpCooldown = 0.5f;
     [SerializeField] int collectedCoins = 0;
     [SerializeField] bool jump;
     [SerializeField] bool isLanding;
@@ -20,11 +21,9 @@ public class Player : MonoBehaviour
     [SerializeField] bool hasShield;
     [SerializeField] bool isGrounded;
     [SerializeField] bool isGameOver;
-
+    [SerializeField] bool isJumpCooldown;
 
     private float lastYPos;
-    private bool isJumpCooldown = false;
-    private float jumpCooldown = 0.5f;
 
     private void Start()
     {
