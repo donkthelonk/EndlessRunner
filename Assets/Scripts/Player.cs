@@ -21,7 +21,10 @@ public class Player : MonoBehaviour
     [SerializeField] bool isGrounded;
     [SerializeField] bool isGameOver;
 
-    float lastYPos;
+
+    private float lastYPos;
+    private bool isJumpCooldown = false;
+    private float jumpCooldown = 0.5f;
 
     private void Start()
     {
@@ -50,17 +53,24 @@ public class Player : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                // get rid of airjump if not grounded
-                if(airJump && !isGrounded)
+                // only jump if not on cooldown
+                if (!isJumpCooldown)
                 {
-                    airJump = false;
+                    // get rid of airjump if not grounded
+                    if (airJump && !isGrounded)
+                    {
+                        airJump = false;
+                    }
+
+                    // enable jump
+                    jump = true;
+
+                    // Triggers the jump animation
+                    anim.SetTrigger("Jump");
+
+                    // Start cooldown Coroutine
+                    StartCoroutine(JumpCooldown());
                 }
-
-                // enable jump
-                jump = true;
-
-                // Triggers the jump animation
-                anim.SetTrigger("Jump");
             }
         }
     }
@@ -109,6 +119,8 @@ public class Player : MonoBehaviour
     // Jump logic
     void CheckForJump()
     {
+
+
         // check if user has pressed jump key; if so, reset jump bool and jump
         if (jump)
         {
@@ -169,6 +181,14 @@ public class Player : MonoBehaviour
     public bool IsGameOver()
     {
         return isGameOver;
+    }
+
+    // Coroutine to wait between jump key presses
+    IEnumerator JumpCooldown()
+    {
+        isJumpCooldown = true;
+        yield return new WaitForSeconds(jumpCooldown);
+        isJumpCooldown = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

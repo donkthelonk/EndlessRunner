@@ -2900,7 +2900,7 @@ MonoBehaviour:
   collectedCoins: 0
   jump: 0
   isLanding: 0
-  airJump: 0
+  airJump: 1
   hasShield: 0
   isGrounded: 0
   isGameOver: 0
