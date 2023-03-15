@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
         CheckForJump();
     }
 
-    // Logic for user input
+    // Method to check for user input
     void CheckForInput()
     {
         // check if grounded or if air jump powerup active
@@ -117,7 +117,7 @@ public class Player : MonoBehaviour
 
     }
 
-    // Jump logic
+    // Method for jumping logic
     void CheckForJump()
     {
 
@@ -143,6 +143,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    // Method to check for falling state
     void CheckForFalling()
     {
         // check if player is falling
@@ -159,17 +160,19 @@ public class Player : MonoBehaviour
         lastYPos = transform.position.y;
     }
 
-    // method to call from UIController to get collectedCoins from Player
+    // Method to call from UIController to get collectedCoins from Player
     public int GetCollectedCoins()
     {
         return collectedCoins;
     }
 
+    // Method to increase distanceTraveled based on Time.deltaTime
     private void IncreaseDistanceTraveled()
     {
         distanceTraveled += Time.deltaTime;
     }
 
+    // Method to trigger the game over screen
     private void GameOver()
     {
         isGameOver = true;
@@ -179,6 +182,7 @@ public class Player : MonoBehaviour
         Time.timeScale = 0;
     }
 
+    // Method to check if game over is true
     public bool IsGameOver()
     {
         return isGameOver;
@@ -192,6 +196,7 @@ public class Player : MonoBehaviour
         isJumpCooldown = false;
     }
 
+    // Method for collision interactions
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Obstacle collisions
@@ -227,6 +232,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    // Method for trigger interactions
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // destroy coin and increase collectedCoins 
