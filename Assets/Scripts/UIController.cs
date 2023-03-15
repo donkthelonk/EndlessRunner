@@ -13,6 +13,7 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject gameMusic;
     [SerializeField] GameObject sky;
 
+    // Method to show the game over screen
     public void ShowGameOverScreen()
     {
         // sets the game over screen to active
@@ -31,11 +32,10 @@ public class UIController : MonoBehaviour
         distanceTraveled.text = "Meters Traveled: " + roundedDistance;
 
         // display number of coins collected in text field
-        collectedCoins.text = "Coins Collected: " + player.GetCollectedCoins();
-
-
+        collectedCoins.text = "Coins Collected: " + player.GetCollectedCoins()
     }
 
+    // Method to restart the game scene
     public void GameRestart()
     {
         //Debug.Log("GameRestart");
@@ -45,6 +45,7 @@ public class UIController : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    // Method to return to Menu
     public void BackToMenu()
     {
         // Restart time
