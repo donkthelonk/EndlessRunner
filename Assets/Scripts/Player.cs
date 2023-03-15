@@ -48,8 +48,10 @@ public class Player : MonoBehaviour
     // Logic for user input
     void CheckForInput()
     {
+        // check if grounded or if air jump powerup active
         if(isGrounded || airJump)
         {
+            // if so, check for user input for jump
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 // only jump if not on cooldown
