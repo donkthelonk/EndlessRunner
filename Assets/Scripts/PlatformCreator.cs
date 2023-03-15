@@ -7,7 +7,7 @@ public class PlatformCreator : MonoBehaviour
     [SerializeField] GameObject[] platformPrefab;
     [SerializeField] Transform referencePoint;
     [SerializeField] GameObject lastCreatedPlatform;
-    //[SerializeField] float spaceBetweenPlatforms = 2;
+    //[SerializeField] float spaceBetweenPlatforms = 2;  // removed for randomSpaceInBetweenPlatforms
     [SerializeField] Player player;
 
     float lastPlatformWidth;
@@ -24,6 +24,7 @@ public class PlatformCreator : MonoBehaviour
         // when platform reaches a certain point, spawn a new platform
         if (lastCreatedPlatform.transform.position.x < referencePoint.position.x)
         {
+            // Create a randomly sized space
             float randomSpaceInBetweenPlatforms = Random.Range(2, 5);
 
             // New position to create platform
