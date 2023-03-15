@@ -32,7 +32,7 @@ public class UIController : MonoBehaviour
         distanceTraveled.text = "Meters Traveled: " + roundedDistance;
 
         // display number of coins collected in text field
-        collectedCoins.text = "Coins Collected: " + player.GetCollectedCoins()
+        collectedCoins.text = "Coins Collected: " + player.GetCollectedCoins();
     }
 
     // Method to restart the game scene
