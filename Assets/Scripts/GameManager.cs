@@ -7,15 +7,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] bool paused;
     [SerializeField] GameObject pauseScreen;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
+        // Check for user input for pause
         if (Input.GetKeyDown(KeyCode.P))
         {
             ChangePaused();
@@ -50,6 +45,4 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1;
         }
     }
-
-
 }
