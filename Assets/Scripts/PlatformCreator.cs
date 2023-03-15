@@ -12,19 +12,13 @@ public class PlatformCreator : MonoBehaviour
 
     float lastPlatformWidth;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        //lastCreatedPlatform = Instantiate(platformPrefab, referencePoint.position, Quaternion.identity);
-    }
-
     // Update is called once per frame
     void Update()
     {
         CreateNewPlatform();
     }
 
+    // Method for creating a new Platform
     private void CreateNewPlatform()
     {
         // when platform reaches a certain point, spawn a new platform
@@ -41,6 +35,5 @@ public class PlatformCreator : MonoBehaviour
             BoxCollider2D collider = lastCreatedPlatform.GetComponent<BoxCollider2D>();
             lastPlatformWidth = collider.bounds.size.x;
         }
-
     }
 }
