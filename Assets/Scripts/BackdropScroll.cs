@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class BackdropScroll : MonoBehaviour
 {
-    SpriteRenderer renderer;
     [SerializeField] float speed = 1;
-    float offset = 0;
+
+    private SpriteRenderer renderer;
+    private float offset = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,10 @@ public class BackdropScroll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // update the offset based on speed * time
         offset += Time.deltaTime * speed;
+
+        // move the sprite on the x axis by offset amount
         renderer.material.mainTextureOffset = new Vector2(offset, 0);
     }
 }
