@@ -8,12 +8,14 @@ public class Sky : MonoBehaviour
     [SerializeField] AudioClip daySound;
     [SerializeField] AudioSource audioSource;
 
+    // Method for night time sound
     public void PlayNightSound()
     {
         audioSource.clip = nightSound;
         audioSource.Play();
     }
 
+    // Method for day time sound
     public void PlayDaySound()
     {
         audioSource.clip = daySound;
