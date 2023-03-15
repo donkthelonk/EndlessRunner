@@ -14,12 +14,7 @@ public class EnvironmentController : MonoBehaviour
         StartCoroutine(CreateEnvironmentElement());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // Coroutine for spawning environment elements, like the big head and palm trees
     IEnumerator CreateEnvironmentElement()
     {
         Instantiate(environmentElement[Random.Range(0, environmentElement.Length)], referencePoint.position + offset, Quaternion.identity);
