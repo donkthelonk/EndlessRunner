@@ -2745,8 +2745,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -323.5171, y: -15}
-  m_SizeDelta: {x: 289.1311, y: 57.5311}
+  m_AnchoredPosition: {x: -290.62878, y: -15}
+  m_SizeDelta: {x: 354.9077, y: 57.5311}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1433419512
 MonoBehaviour:
@@ -2781,7 +2781,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Avoid obstacles!
+  m_Text: Avoid Red Obstacles!
 --- !u!222 &1433419513
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3304,6 +3304,7 @@ MonoBehaviour:
   shieldBubblePrefab: {fileID: 2020948413}
   sfxManager: {fileID: 1364906019}
   jumpForce: 10
+  jumpCooldown: 0.5
   collectedCoins: 0
   jump: 0
   isLanding: 0
@@ -3311,6 +3312,7 @@ MonoBehaviour:
   hasShield: 0
   isGrounded: 0
   isGameOver: 0
+  isJumpCooldown: 0
 --- !u!61 &1706927274
 BoxCollider2D:
   m_ObjectHideFlags: 0
