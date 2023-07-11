@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,8 +11,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Check for user input for pause
-        if (Input.GetKeyDown(KeyCode.P))
+        // Check for user input for pause and pause as long as scene is not MainMenu (not sure if good idea or better way)
+        if (Input.GetKeyDown(KeyCode.P) && SceneManager.GetActiveScene().name != "MainMenu")
         {
             ChangePaused();
         }
